@@ -1,0 +1,92 @@
+  
+.advantages-item {
+  &::before {
+   display: block;
+    content: '';
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F5F4FA;
+    margin-bottom: 30px;
+  }
+    
+    &.antenna::before {
+    background-image: url(../images/sprite/antenna1.svg);
+    }
+        
+    &.clock::before {
+    background-image: url(../images/sprite/clock1.svg);
+    }
+        
+    &.diagram:before {
+    background-image: url(../images/sprite/diagram1.svg);
+    }
+        
+    &.astronaut:before {
+    background-image: url(../images/sprite/astronaut1.svg);
+    }
+}
+
+
+@media screen and (max-width:767px) {
+  .advantages-item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .advantages-item {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+}
+
+
+@media screen and (min-width:1200px) {
+  .advantages-item {
+    width: 270px;
+  }
+}
+
+
+
+.advantages-title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  line-height: 1.14;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.advantages-text {
+  color: var(--primery-text-color);
+  line-height: 1.71;
+}
+
+
+
+@media screen and (min-width:768px) {
+  .advantages-title {
+    text-align: start;
+  }
+}
+
+.advantages-list {
+  display: block;
+}
+
+@media screen and (min-width:768px) {
+  .advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width:1200px) {
+    .advantages-list {
+      flex-wrap: nowrap;
+    }
+  }
+}
+

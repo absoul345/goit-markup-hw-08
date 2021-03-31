@@ -1,0 +1,375 @@
+
+  
+  // .header-section {
+  //   background-color: var(--white-color);
+  //   padding: 32px 0;
+
+  //   & .container {
+  //     display: flex;
+  //     align-items: center;
+  //   }
+  // }
+
+  
+  // .nav {
+  //   display: flex;
+  //   align-items: center;
+  
+  // }
+  
+  // .nav-list {
+  //   display: flex;
+  //   margin-left: 93px;
+  // }
+  
+
+
+  
+  
+  
+  
+  // .current {
+  //   color: var(--accent-color);
+  //   &::after {
+  //     opacity: 1;
+  //   }
+  // }
+  
+ 
+  
+  
+  // 
+  
+  // .contacts-item {
+  //   .contacts-list & + & {
+  //     margin-left: 50px;
+  //   }
+  // }
+ 
+  
+  // .contacts-link {
+  //   color: var(--primery-text-color);
+  //   display: flex;
+  
+  //   font-weight: 500;
+  
+  //   line-height: 1.14;
+  
+  //   letter-spacing: 0.02em;
+  
+  //   text-decoration: none;
+  
+  //   transition-property: color;
+  //   transition-duration: 250ms;
+  //   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  // }
+  
+  // 
+  
+  .nav-list {
+    @media screen and (max-width:767px) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width:768px){
+    .nav-list{
+      display: flex;
+      margin-left: 88px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+.nav-item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+
+  .nav {
+    @media screen and (max-width: 767px) {
+      padding: 16px 0;
+    }
+  }
+
+  @media screen and (min-width:768px){
+    .nav{
+      display: flex;
+      padding: 26px 15px;
+      justify-content: space-between;
+    }
+  }
+
+  .mobile-open-btn {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  @media screen and (min-width:768px){
+    .mobile-open-icon {
+      display: none;
+    }
+  }
+  .mobile-open-icon {
+    width: 40px;
+    height: 40px;
+    &:hover{
+      fill: var(--accent-color);
+    }
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile-menu {
+    display: inline-block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    max-width: 480px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--white-color);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 696969;
+  }
+
+  .is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .mobile-close-menu-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  .mobile-close-menu-icon {
+    width: 40px;
+    height: 40px;
+    &:hover{
+        fill:var(--accent-color)
+    }
+  }
+
+  .mobile-menu-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-menu-item {
+    & + & {
+      margin-top: 32px;
+    }
+  }
+
+  .mobile-contacts-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 302px;
+  }
+
+  .mobile-contact-item {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .mobile-social-list {
+    display: flex;
+    margin-top: 64px;
+    justify-content: center;
+  }
+
+  .mobile-social-item {
+    & +&{
+      margin-left: 20px;
+    }
+    &:not(:last-child) {
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+  }
+
+ 
+
+
+  .mobile-menu-list-link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+  }
+
+  .mobile-menu-list-link.current {
+      color: var(--accent-color);
+  }
+
+  .mobile-contacts-link {
+    font-weight:500;
+    font-size: 34px;
+    color: var(--accent-color)
+  }
+
+  .mobile-contacts-link.special-info {
+    font-size: 24px;
+    color: var(--primery-text-color);
+  }
+
+  .mobile-social-list-link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    color: var(--accent-color);
+    padding: 0 10px;
+  }
+
+    
+  .border {
+    border-bottom: 1px solid #ececec;
+  }
+
+  .header-section {
+    display: flex;
+  }
+
+  .svg-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  align-items: center;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  .contacts-link:hover &,
+  .contacts-link:focus & {
+    fill: var(--accent-color);
+  }
+
+}
+
+.svg-tell {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  align-items: center;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  .contacts-link:hover &,
+  .contacts-link:focus & {
+  fill: var(--accent-color)
+  }
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+
+  & .link:hover,
+  & .link:focus {
+    color: var(--accent-color);
+  }
+  @media screen and (min-width:1200px){
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.nav-title-link {
+  color: var(--title-text-color);
+
+  padding: 32px 0;
+
+  font-weight: 500;
+  line-height: 1.14;
+
+  letter-spacing: 0.02em;
+
+  text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+  
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    left: 0;
+    bottom: 0;
+  
+    opacity: 0;
+  
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  }
+}
+
+  @media screen and (max-width:767px) {
+    .contacts-list {
+      display: none;
+  }
+}
+
+.contacts-link {
+  color: var(--primery-text-color);
+}
+
+.nav-link-hover {
+  &:hover,
+  &:focus {
+  color: var(--accent-color);
+  }
+}
+
+.contacts-item{
+  @media screen and (max-width:1199px){
+    &:not(:last-child){
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (min-width:1200px){
+  .contacts-item{
+    &:not(:last-child){
+      margin-right: 30px;
+    }
+  }
+}

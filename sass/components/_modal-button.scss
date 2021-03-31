@@ -1,0 +1,42 @@
+.modal-btn-hero {
+    color: var(--white-color);
+    background-color: var(--accent-color);
+
+    border-radius: 4px;
+  
+    display: inline-block;
+  
+    text-align: center;
+  
+    border-color: transparent;
+  
+    font-weight: 700;
+    font-size: 16px;
+
+    margin-top: 30px;
+    margin-bottom: 118px;
+    padding: 10px 32px;
+  
+    line-height: 1.9;
+  
+    letter-spacing: 0.06em;
+  
+    cursor: pointer;
+  
+    outline: none;
+  
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: #188ce8;
+    }
+  }
+
+  @media screen and (min-width:1200px){
+    .modal-btn-hero {
+      margin-bottom: 200px;
+    }
+  }

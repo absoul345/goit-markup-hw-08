@@ -1,0 +1,30 @@
+.social-link {
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px;
+  
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+  
+  &:hover .team-social-icon,
+  &:focus .team-social-icon {
+  fill: white;
+  }
+
+}
+  
+
+
